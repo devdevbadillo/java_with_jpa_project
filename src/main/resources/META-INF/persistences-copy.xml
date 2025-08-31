@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             version="3.0">
+    <persistence-unit name="jpa-hibernate-unit">
+        <!-- Proveedor de persistencia -->
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <!-- Entidades -->
+        <class>com.david.jpa_project.model.entities.entity.AccessToken</class>
+        <class>com.david.jpa_project.model.entities.entity.RefreshToken</class>
+        <class>com.david.jpa_project.model.entities.entity.Address</class>
+        <class>com.david.jpa_project.model.entities.entity.Category</class>
+        <class>com.david.jpa_project.model.entities.entity.Credential</class>
+        <class>com.david.jpa_project.model.entities.entity.Customer</class>
+        <class>com.david.jpa_project.model.entities.entity.Employee</class>
+        <class>com.david.jpa_project.model.entities.entity.User</class>
+        <class>com.david.jpa_project.model.entities.entity.Product</class>
+        <class>com.david.jpa_project.model.entities.entity.Order</class>
+
+        <!-- Propiedades de conexión -->
+        <properties>
+            <!-- JDBC -->
+            <property name="jakarta.persistence.jdbc.driver" value=""/>
+            <property name="jakarta.persistence.jdbc.url" value=""/>
+            <property name="jakarta.persistence.jdbc.user" value=""/>
+            <property name="jakarta.persistence.jdbc.password" value=""/>
+
+            <!-- Dialecto de Hibernate -->
+            <property name="hibernate.dialect" value=""/>
+
+            <!-- Config extra -->
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>
