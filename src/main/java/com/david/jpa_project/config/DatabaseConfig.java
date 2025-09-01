@@ -10,17 +10,12 @@ public class DatabaseConfig {
 
     public static void initialize() {
         try {
-            // Esto forzará la creación de las tablas
             entityManagerFactory = Persistence.createEntityManagerFactory("jpa-hibernate-unit");
-            System.out.println("EntityManagerFactory creado correctamente");
 
-            // Crear un EntityManager para forzar la conexión
             EntityManager em = entityManagerFactory.createEntityManager();
             em.close();
-            System.out.println("Conexión a base de datos verificada");
 
         } catch (Exception e) {
-            System.err.println("Error al inicializar JPA: " + e.getMessage());
             e.printStackTrace();
         }
     }
